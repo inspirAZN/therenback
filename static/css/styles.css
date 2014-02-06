@@ -1,0 +1,176 @@
+html {
+    min-height: 100%;
+    background-size: cover;
+    background-image: url(http://blog.travefy.com/wp-content/uploads/2013/08/Paris.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+body{
+    min-height:100%;
+    padding-top: 70px;
+}
+
+/* border resets*/
+.no_bot_bord {
+    border-bottom: none !important;
+}
+
+/* Background colors */
+.transparent {
+    background-color: transparent;
+}
+
+.green_sea_back {
+    background-color: #16a085 !important;
+}
+
+/* Font colors*/
+.asphault {
+    color: #7f8c8d;
+}
+
+.clouds {
+    color: #ecf0f1;
+}
+
+.alizarin {
+    color: #ecf0f1;
+}
+
+.green_sea {
+    color: #16a085;
+}
+
+/* Landing page styles */
+
+.landing_header {
+    color: #ffffff;
+}
+
+.landing_header_font {
+    font-size: 4.5em;
+}
+
+/* My Moments styles */
+
+.no_back {
+    background-image: none !important;
+    background-color: #34495e;
+}
+
+.moments .row{
+    border-bottom: #95a5a6 1px solid;
+}
+.moments img {
+    max-height: 400px;
+    max-width: 400px;
+    margin: auto;
+}
+.moments img:hover {
+    -moz-transform:  scale(1.05);
+    /*-moz-transition-timing-function: ease-in;*/
+    -moz-transition-duration: 200ms;
+    -webkit-transform:  scale(1.05);
+    /*-webkit-transition-timing-function: ease-in;*/
+    -webkit-transition-duration: 200ms;
+    transform: scale(1.05);
+    /*transition-timing-function: ease-in;*/
+    transition-duration: 200ms;
+ }
+
+.moments h1 {
+    color: #7f8c8d;
+}
+.moments h3 {
+    color: #ecf0f1;
+}
+.moments span {
+    color: #e74c3c;
+    padding: 3% 0;
+}
+.moments {
+    color: #16a085;
+}
+
+.more_moments {
+    margin-bottom: 5%;
+    margin-top: 3%;
+    color: #bdc3c7;
+}
+
+/* Home styles*/
+
+#home {
+    /*margin-top: -19px;*/
+    position: absolute;
+    top:51px;
+    bottom:0;
+    width: 100%;
+    font-size: 4em;
+}
+
+#home .row {
+    padding: 11% 0;
+}
+#home .row:nth-child(1) {
+    background-color: #16a085;
+    min-height: 10%;
+    color: #2980b9;
+    opacity: 1;
+    transition: opacity .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+}
+#home .row:nth-child(1):hover {
+    -webkit-transform: translate(1.5em, 0);
+    -webkit-transition-duration: 500ms;
+    transform: translate(1.5em, 0);
+    transition-duration: 500ms;
+    opacity: .65;
+
+}
+#home .row:nth-child(2) {
+    background-color: #7f8c8d;
+    min-height: 6%;
+    color: #ecf0f1;
+    opacity: 1;
+}
+#home .row:nth-child(2):hover{
+    /*-webkit-transform: rotate(10deg);*/
+    /*-webkit-transition-duration: 500ms;*/
+    /*transform: rotate(10deg);*/
+    /*transition-duration: 500ms;*/
+    opacity: .65;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
+#home .row:nth-child(3) {
+    background-color: #2980b9;
+    min-height: 10%;
+    color: #16a085;
+    opacity: 1;
+    transition: opacity .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+}
+#home .row:nth-child(3):hover {
+    -webkit-transform: translate(-1.5em, 0);
+    -webkit-transition-duration: 500ms;
+    transform: translate(-1.5em, 0);
+    transition-duration: 500ms;
+    opacity: .65;
+}
+#home a {
+    text-decoration: none;
+    color: #ecf0f1;
+}
+.behind {
+    position: absolute;
+    z-index: -1;
+    left: 36%;
+}
