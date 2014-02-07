@@ -11,6 +11,32 @@ body{
     padding-top: 70px;
 }
 
+/* fonts */
+
+@font-face {
+    font-family: Allura;
+    src: url('../fonts/Allura-Regular.otf');
+}
+
+@font-face {
+    font-family: LearningCurve;
+    src: url('../fonts/LearningCurve_OT.otf');
+}
+
+@font-face {
+    font-family: SilentReaction;
+    src: url('../fonts/SilentReaction.ttf');
+}
+.silent {
+    font-family: "SilentReaction", SilentReaction !important;
+}
+.learning {
+    font-family: "LearningCurve", LearningCurve;
+}
+.allura {
+    font-family: "Allura", Allura;
+}
+
 /* border resets*/
 .no_bot_bord {
     border-bottom: none !important;
