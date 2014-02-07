@@ -89,8 +89,8 @@ body{
     border-bottom: #95a5a6 1px solid;
 }
 .moments img {
-    max-height: 400px;
-    max-width: 400px;
+    max-height: 300px;
+    max-width: 300px;
     margin: auto;
 }
 .moments img:hover {
