@@ -9,6 +9,7 @@ html {
 body{
     min-height:100%;
     padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 /* fonts */
@@ -44,7 +45,7 @@ body{
 
 /* Background colors */
 .transparent {
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 .green_sea_back {
@@ -254,4 +255,75 @@ body{
 .sortable li:last-child {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+#page {
+    background: transparent;
+}
+
+#preview {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+#preview img {
+    width: 100%;
+    margin: auto;
+}
+
+.hiddenfile {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+#chooseFile span {
+    padding-top: 2%;
+    font-size: 3.5em;
+    color: #16a085;
+}
+
+.filters {
+    position: fixed;
+    bottom: 56px !important;
+    min-height: 25%;
+    background-color: #000000;
+}
+
+.filters .row div {
+    display: inline;
+}
+
+.filters img {
+    max-width: 30%;
+    padding-top: 5%;
+}
+
+#grayscale img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+
+#sepia img {
+    filter: sepia(150%);
+    -webkit-filter: sepia(150%);
+    -moz-filter: sepia(150%);
+    -ms-filter: sepia(150%);
+    -o-filter: sepia(150%);
+}
+
+#contrast img {
+    filter: contrast(200%);
+    -webkit-filter: contrast(200%);
+    -moz-filter: contrast(200%);
+    -ms-filter: contrast(200%);
+    -o-filter: contrast(200%);
+}
+
+.showOnUpload {
+    visibility: hidden;
 }

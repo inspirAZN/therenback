@@ -24,7 +24,7 @@
                 <span class="icon-bar green_sea_back"></span>
                 <span class="icon-bar green_sea_back"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-send green_sea"></span></a>
+            <a class="navbar-brand" href="home.html"><span class="glyphicon glyphicon-send green_sea"></span></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,44 +47,32 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="container center-block">
+                <div class="container center-block transparent">
+                    <div class="deleteonupload">
+                        <div class="row no_bot_bord">
+                            <h1 class="silent page-header">Camera</h1>
+                        </div>
+                        <div class="row">
+                            <div class="jumbotron green_sea_back">
+                                <div class="container">
+                                    <h3>Click the <span class="glyphicon glyphicon-camera"></span> to take a picture
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <div data-role="page" id="page">
-                        <style>
-                            #preview {
-                                width: 100%;
-                                max-width: 300px;
-                                margin: auto;
-                            }
 
-                            #preview img {
-                                width: 100%;
-                                margin: auto;
-                            }
-
-                            #preview img:hover {
-                                opacity: .7;
-                            }
-
-                            .hiddenfile {
-                                width: 0px;
-                                height: 0px;
-                                overflow: hidden;
-                            }
-                        </style>
-                        <div data-role="header">
-                            <h3>Header</h3>
-                        </div>
-                        <div data-role="content">
-                            <!--<ul id="info" data-role="listview" data-inset="true">-->
+                        <!--<div data-role="content">-->
+                        <!--<ul id="info" data-role="listview" data-inset="true">-->
                             <!--</ul>-->
                             <div class="hiddenfile">
                                 <input type="file" data-clear-btn="false" name="image" accept="image/*" capture>
                             </div>
                             <div id="preview">
                             </div>
-                            <button id="chooseFile">Choose file</button>
-                        </div>
 
                     </div>
 
@@ -96,8 +84,11 @@
                             });
                             $("input[type=file]").change(function () {
                                 var file = $("input[type=file]")[0].files[0];
-                                $("#preview").empty();
+                                $(".preview").empty();
                                 displayAsImage3(file, "preview");
+                                displayGrayscale(file, "grayscale");
+                                displaySepia(file, "sepia");
+                                displayContrast(file, "contrast");
 
                                 $info = $("#info");
                                 $info.empty();
@@ -119,6 +110,8 @@
 
                         function displayAsImage3(file, containerid) {
                             if (typeof FileReader !== "undefined") {
+                                $(".deleteonupload").remove();
+                                $(".showOnUpload").css("visibility", "visible");
                                 var container = document.getElementById(containerid),
                                         img = document.createElement("img"),
                                         reader;
@@ -133,8 +126,119 @@
                             }
                         }
 
+                        function displayGrayscale(file, containerid) {
+                            if (typeof FileReader !== "undefined") {
+                                var container = document.getElementById(containerid),
+                                        img = document.createElement("img"),
+                                        reader;
+                                container.appendChild(img);
+                                reader = new FileReader();
+                                reader.onload = (function (theImg) {
+                                    return function (evt) {
+                                        theImg.src = evt.target.result;
+                                    };
+                                }(img));
+                                reader.readAsDataURL(file);
+                            }
+                        }
+
+                        function displaySepia(file, containerid) {
+                            if (typeof FileReader !== "undefined") {
+                                var container = document.getElementById(containerid),
+                                        img = document.createElement("img"),
+                                        reader;
+                                container.appendChild(img);
+                                reader = new FileReader();
+                                reader.onload = (function (theImg) {
+                                    return function (evt) {
+                                        theImg.src = evt.target.result;
+                                    };
+                                }(img));
+                                reader.readAsDataURL(file);
+                            }
+
+
+                        }
+
+                        function displayContrast(file, containerid) {
+                            if (typeof FileReader !== "undefined") {
+                                var container = document.getElementById(containerid),
+                                        img = document.createElement("img"),
+                                        reader;
+                                container.appendChild(img);
+                                reader = new FileReader();
+                                reader.onload = (function (theImg) {
+                                    return function (evt) {
+                                        theImg.src = evt.target.result;
+                                    };
+                                }(img));
+                                reader.readAsDataURL(file);
+                            }
+
+                        }
+
+                        $(document).ready(function () {
+
+                            $(".contrast").click(function () {
+                                $("#preview img").css({"filter": "contrast(200%)", "-webkit-filter": "contrast(200%)", "-moz-filter": "contrast(200%)", "-ms-filter": "contrast(200%)", "-o-filter": "contrast(200%)"});
+
+                            })
+
+                            $(".sepia").click(function () {
+                                $("#preview img").css({"filter": "sepia(150%)", "-webkit-filter": "sepia(150%)", "-moz-filter": "sepia(150%)", "-ms-filter": "sepia(150%)", "-o-filter": "sepia(150%)"});
+                                console.log("sepia");
+                            })
+
+                            $(".grayscale").click(function () {
+                                $("#preview img").css({"filter": "grayscale(100%)", "-webkit-filter": "grayscale(100%)", "-moz-filter": "grayscale(100%)", "-ms-filter": "grayscale(100%)", "-o-filter": "grayscale(100%)"});
+
+                            })
+                        });
+
+
+                        //                        function grayscale(){
+                        //                            $("#preview img").css({"filter":"grayscale(100%)","-webkit-filter":"grayscale(100%)","-moz-filter":"grayscale(100%)","-ms-filter":"grayscale(100%)","-o-filter":"grayscale(100%)"});
+                        //                            console.log("gray");
+                        //                        }
+                        //                        function sepia(){
+                        //                            $("#preview img").css({"filter":"sepia(150%)","-webkit-filter":"sepia(150%)","-moz-filter":"sepia(150%)","-ms-filter":"sepia(150%)","-o-filter":"sepia(150%)"});
+                        //                            console.log("sepia");
+                        //                        }
+                        //                        function contrast(){
+                        //                            $("#preview img").css({"filter":"contrast(200%)","-webkit-filter":"contrast(200%)","-moz-filter":"contrast(200%)","-ms-filter":"contrast(200%)","-o-filter":"contrast(200%)"});
+                        //                            console.log("contrast");
+                        //                        }
+
+
                     </script>
+                    <div class="showOnUpload">
+                        <nav class="navbar navbar-inverse navbar-fixed-bottom filters">
+                            <span class="text-center">&nbsp; Apply a filter!</span>
+
+                            <div class="row">
+                                <div class="grayscale">
+                                    <div id="grayscale">
+                                    </div>
+                                </div>
+                                <div class="sepia">
+                                    <div id="sepia">
+                                    </div>
+                                </div>
+                                <div class="contrast">
+                                    <div id="contrast">
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+                        <div class="container text-center">
+                            <a href="#" id="chooseFile"><span class="glyphicon glyphicon-camera"></span></a>
+                        </div>
+                    </nav>
                 </div>
+            </div>
             </div>
             <br/>
             <br/>
