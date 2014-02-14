@@ -103,7 +103,7 @@ body{
     transform: scale(1.05);
     /*transition-timing-function: ease-in;*/
     transition-duration: 200ms;
- }
+}
 
 .moments h1 {
     color: #7f8c8d;
@@ -133,15 +133,16 @@ body{
     top:51px;
     bottom:0;
     width: 100%;
-    font-size: 4em;
+    font-size: 2.5em;
 }
 
 #home .row {
-    padding: 11% 0;
+    /*padding: 11% 0;*/
+    padding-top: 16%;
 }
 #home .row:nth-child(1) {
     background-color: #16a085;
-    min-height: 10%;
+    min-height: 36%;
     color: #2980b9;
     opacity: 1;
     transition: opacity .5s ease-out;
@@ -159,7 +160,7 @@ body{
 }
 #home .row:nth-child(2) {
     background-color: #7f8c8d;
-    min-height: 6%;
+    min-height: 28%;
     color: #ecf0f1;
     opacity: 1;
 }
@@ -176,7 +177,7 @@ body{
 }
 #home .row:nth-child(3) {
     background-color: #2980b9;
-    min-height: 10%;
+    min-height: 36%;
     color: #16a085;
     opacity: 1;
     transition: opacity .5s ease-out;
