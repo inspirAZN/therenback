@@ -110,6 +110,7 @@ body{
 }
 .moments h3 {
     color: #ecf0f1;
+    font-size: 22px;
 }
 .moments span {
     color: #e74c3c;
@@ -123,6 +124,28 @@ body{
     margin-bottom: 5%;
     margin-top: 3%;
     color: #bdc3c7;
+}
+
+.bank h2 {
+    font-size: 20px;
+}
+
+.foo
+{
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+.heartoverlay
+{
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    top: 17px;
+    left: 96%;
+    width: 30px;
+    height: 10px;
 }
 
 /* Home styles*/
