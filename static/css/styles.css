@@ -130,6 +130,10 @@ body{
     font-size: 20px;
 }
 
+.bankform {
+    margin-bottom: 5%;
+}
+
 .foo
 {
    position: absolute;
