@@ -201,3 +201,30 @@ body{
     z-index: -1;
     left: 36%;
 }
+
+.sortable {
+    padding-left: 0;
+}
+
+.sortable li {
+    width: 100%;
+    list-style: none;
+    background-color: #16a085;
+    text-align: center;
+    padding: 1.5%;
+    font-weight: bold;
+}
+
+.sortable li:nth-child(even) {
+    background-color: #1abc9c;
+}
+
+.sortable li:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.sortable li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

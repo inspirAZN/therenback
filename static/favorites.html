@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="no_back">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>There and Back</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+
+</head>
+<body class="transparent">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar green_sea_back"></span>
+                <span class="icon-bar green_sea_back"></span>
+                <span class="icon-bar green_sea_back"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-send green_sea"></span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li class="active"><a href="mymoments.html">My Moments</a></li>
+                <li><a href="filler.html">Future</a></li>
+                <li><a href="filler.html">Bank</a></li>
+                <li><a href="filler.html">Settings</a></li>
+                <li><a href="filler.html">Sign Out</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="container center-block">
+
+                    <div class="row no_bot_bord">
+                        <h1 class="silent page-header">Favorite P laces</h1>
+
+                    </div>
+                    <div class="row">
+                        <ul class="sortable clouds">
+                            <li>Tokyo, Japan <span class="close">x</span></li>
+                            <li>Venice, Italy <span class="close">x</span></li>
+                            <li>New York, New York <span class="close">x</span></li>
+                            <li>Rome, Italy <span class="close">x</span></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-info green_sea_back" data-toggle="modal" data-target="#myModal">Add
+                            Place
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br/>
+        <br/>
+    </div>
+</div>
+
+
+<!--  modal collection -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Add Place</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="newPlace">Add Place</label>
+                        <input type="text" class="form-control" id="newPlace" placeholder="Enter the name of the place">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary green_sea_back" id="save" data-dismiss="modal">Save Place
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+
+
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery-2.0.3.js"></script>
+
+<script src="js/jquery.sortable.js"></script>
+<script>
+    $('.sortable').sortable();
+</script>
+<script>
+    $("li .close").bind("click", (function () {
+        $(this).closest("li").remove();
+    }))
+
+    $("#save").click(function () {
+        // remove previous justCreated class
+        $("li").removeClass("justCreated");
+
+        //get the value of the new place
+        var newPlace = $('input').val();
+        var newElement = "<li>" + newPlace + "<span class=\"close justCreated\">x</span></li>";
+        $('.sortable').append(newElement);
+
+        //bind the close function to newly added elem
+        $("li .justCreated").bind(newClose());
+
+    })
+
+    function newClose() {
+//            $(this).closest("li").remove();
+        $("li .close").bind("click", (function () {
+            $(this).closest("li").remove();
+        }))
+    }
+</script>
+
+</body>
+</html>
+
