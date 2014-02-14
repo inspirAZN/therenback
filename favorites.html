@@ -6,6 +6,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
+<<<<<<< HEAD
     <!--jquery mobile-->
     <script src="https://raw.github.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script>
     <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.css" />-->
@@ -23,6 +24,19 @@
     <!--});-->
     <!--</script>-->
 
+=======
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-2.0.3.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <!--<script>-->
+    <!--$('.sortable').sortable();-->
+    <!--</script>-->
+>>>>>>> 3a1c18615c5a0160c93059bb529f5f766f6d54ca
 </head>
 <body class="transparent">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -65,9 +79,26 @@
                         <h1 class="silent page-header">Favorite P laces</h1>
 
                     </div>
+<<<<<<< HEAD
                     <div class="row">
                         <ul class="sortable clouds">
                             <li>Tokyo, Japan <span class="close">x</span></li>
+=======
+
+                    <script>
+
+                        $(function () {
+                            $("#sortable").sortable();
+                            $("#sortable").disableSelection();
+                        });
+
+                    </script>
+
+
+                    <div class="row">
+                        <ul id="sortable" class="sortable clouds">
+                        <li>Tokyo, Japan <span class="close">x</span></li>
+>>>>>>> 3a1c18615c5a0160c93059bb529f5f766f6d54ca
                             <li>Venice, Italy <span class="close">x</span></li>
                             <li>New York, New York <span class="close">x</span></li>
                             <li>Rome, Italy <span class="close">x</span></li>
@@ -78,6 +109,7 @@
                             Place
                         </button>
                     </div>
+<<<<<<< HEAD
                     <!--<div class="row">-->
                     <!--<div data-role="content" data-theme="c">-->
                     <!--<ul data-role="listview" data-inset="true" data-theme="d" id="sortable">-->
@@ -90,6 +122,10 @@
                     <!--</ul>-->
                     <!--</div>-->
                     <!--</div>-->
+=======
+
+
+>>>>>>> 3a1c18615c5a0160c93059bb529f5f766f6d54ca
                 </div>
 
             </div>
@@ -127,6 +163,7 @@
 </div>
 
 
+<<<<<<< HEAD
 <script src="https://code.jquery.com/jquery.js"></script>
 
 
@@ -137,6 +174,12 @@
 <script>
     $('.sortable').sortable();
 </script>
+=======
+
+
+<!--<script src="js/jquery.sortable.js"></script>-->
+
+>>>>>>> 3a1c18615c5a0160c93059bb529f5f766f6d54ca
 <script>
     $("li .close").bind("click", (function () {
         $(this).closest("li").remove();
