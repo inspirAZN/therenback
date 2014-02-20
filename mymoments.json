@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+		"location": "New York",
+		"imgsrc": "cover/newyork.jpeg", 
+		"numPhotos": 9,
+		"heart": ""
+	},
+	{
+		"id": 2,
+		"location": "Bora Bora",
+		"imgsrc": "cover/borabora.jpeg", 
+		"numPhotos": 7,
+		"heart": "-empty"
+	},
+	{
+		"id": 3,
+		"location": "Venice",
+		"imgsrc": "cover/venice.jpeg", 
+		"numPhotos": 5,
+		"heart": ""
+	},
+	{
+		"id": 4,
+		"location": "Tokyo",
+		"imgsrc": "cover/tokyo.jpeg", 
+		"numPhotos": 7,
+		"heart": ""
+	}
+]
