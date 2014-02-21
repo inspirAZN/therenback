@@ -7,13 +7,18 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
-
 var mongoose = require('mongoose');
+
+
 var index = require('./routes/index');
+var moments = require('./routes/moments');
 //var project = require('./routes/project');
 //var palette = require('./routes/palette');
 // Example route
 // var user = require('./routes/user');
+
+var local_database_name = 'therenback';
+var local_database_uri  = 'mongodb://localhost/' + local_database_name
 var uristring = process.env.MONGOLAB_URI ||
 		process.env.MONGOLAB_URL ||
 		'mongodb://localhost/HelloMongoose';
@@ -50,8 +55,8 @@ mongoose.connect(uristring, function(err, res){
 
 // Add routes here
 app.get('/', index.view);
-app.get('/project/:id', project.projectInfo);
-app.get('/palette', palette.randomPalette);
+app.get('/moments/:_id', moments.view);
+// app.get('/palette', palette.randomPalette);
 
 // Example route
 // app.get('/users', user.list);
