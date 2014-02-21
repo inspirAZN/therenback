@@ -1,25 +1,25 @@
 [
 	{
 		"location": "San Francisco",
-		"imgsrc": "cover/sanfrancisco.jpeg", 
+		"imgsrc": "public/images/cover/sanfrancisco.jpeg", 
 		"numPhotos": 9,
 		"heart": "-empty"
 	},
 	{
 		"location": "Rome",
-		"imgsrc": "cover/rome.jpeg", 
+		"imgsrc": "public/images/cover/rome.jpeg", 
 		"numPhotos": 5,
 		"heart": "-empty"
 	},
 	{
 		"location": "London",
-		"imgsrc": "cover/london.jpeg", 
+		"imgsrc": "public/images/cover/london.jpeg", 
 		"numPhotos": 7,
 		"heart": ""
 	},
 	{
 		"location": "Sydney",
-		"imgsrc": "cover/sydney.jpeg", 
+		"imgsrc": "public/images/cover/sydney.jpeg", 
 		"numPhotos": 3,
 		"heart": "-empty"
 	}
