@@ -54,8 +54,8 @@ mongoose.connect(uristring, function(err, res){
 });
 
 // Add routes here
-app.get('/', index.view);
-app.get('/moments/:_id', moments.view);
+// app.get('/', index.view);
+app.get('/', moments.view);
 // app.get('/palette', palette.randomPalette);
 
 // Example route
