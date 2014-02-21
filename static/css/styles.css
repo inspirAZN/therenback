@@ -13,7 +13,7 @@ body{
 }
 
 label {
-    color: #e74c3c;
+    color: #7f8c8d;
 }
 
 /* fonts */
@@ -81,6 +81,10 @@ label {
     background-color: #F7E7CE !important;
 }
 
+.asphault_back {
+    background-color: #7f8c8d !important;
+}
+
 /* Font colors*/
 .asphault {
     color: #7f8c8d;
@@ -104,6 +108,10 @@ label {
 
 .pomegranate {
     color: #c0392b;
+}
+
+.bluee {
+    color: #39b3d7 !important;
 }
 
 /* Landing page styles */
@@ -146,6 +154,7 @@ label {
     transition-duration: 200ms;
 }
 .moments h1 {
+    color: #7f8c8d;
     margin-top: 30px;
     margin-bottom: 7px;
 }
@@ -167,8 +176,6 @@ label {
     color: #2c3e50;
 }
 
-j
-
 .bankform {
     margin-bottom: 5%;
 }
@@ -181,8 +188,6 @@ j
     /*-webkit-filter: grayscale(100%);*/
     margin: 0 0 0 0;
     background:url(http://i1372.photobucket.com/albums/ag338/joannkimmm/butcher_paper_zps1d539391.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .foo {
@@ -225,8 +230,24 @@ j
     margin-bottom: -10px;
 }
 
+.basic-text {
+    font-size: 16px;
+}
+
+.large-text {
+    font-size: 16px;
+}
+
+.larger-text {
+    font-size: 55px !important;
+}
+
 .decrease-top-margin h2 {
     margin-top: -10px;
+}
+
+.decrease-bottom-margin h1 {
+    margin-bottom: 7px;
 }
 
 .index-background {
@@ -333,14 +354,14 @@ j
 .sortable li {
     width: 100%;
     list-style: none;
-    background-color: #e74c3c;
+    background-color: #7f8c8d;
     text-align: center;
     padding: 1.5%;
     font-weight: bold;
 }
 
 .sortable li:nth-child(even) {
-    background-color: #c0392b;
+    background-color: #2c3e50;
 }
 
 .sortable li:first-child {
