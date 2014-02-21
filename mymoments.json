@@ -2,28 +2,32 @@
 	{
 		"id": 1,
 		"location": "New York",
-		"imgsrc": "cover/newyork.jpeg", 
+		// "imgsrc": "cover/newyork.jpeg", 
+		"imgURL": "http://fc09.deviantart.net/fs71/f/2013/198/4/1/windows_8___new_york_blurred_by_nofearl-d6du7yi.jpg",
 		"numPhotos": 9,
 		"heart": ""
 	},
 	{
 		"id": 2,
 		"location": "Bora Bora",
-		"imgsrc": "cover/borabora.jpeg", 
+		// "imgsrc": "cover/borabora.jpeg",
+		"imgURL": "http://sites.psu.edu/passiondgeary/wp-content/uploads/sites/8695/2014/01/bora-bora-4.jpg", 
 		"numPhotos": 7,
 		"heart": "-empty"
 	},
 	{
 		"id": 3,
 		"location": "Venice",
-		"imgsrc": "cover/venice.jpeg", 
+		// "imgsrc": "cover/venice.jpeg", 
+		"imgURL": "http://travelify.co.uk/wp-content/uploads/2013/08/Venice-Italy.jpg",
 		"numPhotos": 5,
 		"heart": ""
 	},
 	{
 		"id": 4,
 		"location": "Tokyo",
-		"imgsrc": "cover/tokyo.jpeg", 
+		// "imgsrc": "cover/tokyo.jpeg",
+		"imgURL": "http://thecarefreetraveler.com/wp-content/uploads/2013/02/tokyo-japan.jpg",
 		"numPhotos": 7,
 		"heart": ""
 	}

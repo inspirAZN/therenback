@@ -8,8 +8,8 @@ html {
 
 body{
     min-height:100%;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* fonts */
@@ -28,6 +28,22 @@ body{
     font-family: SilentReaction;
     src: url('../fonts/SilentReaction.ttf');
 }
+
+@font-face {
+    font-family: Quicksand;
+    src: url('../fonts/Quicksand-Regular.otf');
+}
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url('../fonts/helveticaneue-bold.ttf');
+}
+
+@font-face {
+    font-family: Corbert;
+    src: url('../fonts/Corbert-Regular-webfont.ttf');
+}
+
 .silent {
     font-family: "SilentReaction", SilentReaction !important;
 }
@@ -37,9 +53,18 @@ body{
 .allura {
     font-family: "Allura", Allura;
 }
+.quicksand {
+    font-family: "Quicksand", Quicksand;
+}
+.helveticaneue {
+    font-family: "HelveticaNeue", HelveticaNeue;
+}
+.corbert {
+    font-family: "Corbert", Corbert;
+}
 
 /* border resets*/
-.no_bot_bord {
+/*.no_bot_bord {
     border-bottom: none !important;
 }
 
@@ -69,6 +94,10 @@ body{
     color: #16a085;
 }
 
+.champagne {
+    color: #F7E7CE;
+}
+
 /* Landing page styles */
 
 .landing_header {
@@ -83,12 +112,16 @@ body{
 
 .no_back {
     background-image: none !important;
-    background-color: #34495e;
+    background-color: #f7e7ce;
 }
 
 .moments .row{
-    border-bottom: #95a5a6 1px solid;
+/*    border-bottom: #95a5a6 1px solid;*/
+    font-family: corbert;
+    color: green_sea;
+    margin-left: -22px;
 }
+
 .moments img {
     max-height: 275px;
     max-width: 275px;
@@ -108,6 +141,8 @@ body{
 
 .moments h1 {
     color: #7f8c8d;
+    margin-top: 30px;
+    margin-bottom: -5px;
 }
 .moments h3 {
     color: #ecf0f1;
@@ -135,15 +170,23 @@ body{
     margin-bottom: 5%;
 }
 
-.foo
-{
+.cardboard-background {
+    width: 100%;
+    height: 100%
+    float: left;
+    position: absolute;
+    margin: 0 0 0 0;
+    background:url(http://www.newzealmeats.com/brown_paper_background.jpg);
+    background-repeat: repeat-y;
+}
+
+.foo {
    position: absolute;
    top: 0;
    right: 0;
 }
 
-.heartoverlay
-{
+.heartoverlay {
     background-color: transparent;
     position: relative;
     z-index: 1;
@@ -151,6 +194,47 @@ body{
     left: 96%;
     width: 30px;
     height: 10px;
+}
+
+.round {
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.tutorial-header h1{
+    margin-top: 100px;
+    font-size: 50px;
+}
+
+.center-text {
+    text-align: center;
+    font-size: 57px;
+    margin-top: 80px;
+    margin-bottom: -10px;
+}
+
+.decrease-top-margin h2 {
+    margin-top: -3px;
+}
+
+.index-background {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: absolute;
+    margin: 0 0 0 0;
+    background:url(http://i72.photobucket.com/albums/i162/carycheng77/grabinsta-photo5_zps5959c515.jpg);
+}
+
+.favorites-background {
+    width: 100%;
+    height: 100%;
+    flot: left;
+    position: absolute;
+    margin: 0 0 0 0;
+    background:url(http://i72.photobucket.com/albums/i162/carycheng77/grabinsta-photo_zps45cc433e.jpg);
 }
 
 /* Home styles*/
@@ -169,9 +253,10 @@ body{
     padding-top: 16%;
 }
 #home .row:nth-child(1) {
-    background-color: #16a085;
+    background-color: transparent;
     min-height: 36%;
     color: #2980b9;
+    font-size: 42px;
     opacity: 1;
     transition: opacity .5s ease-out;
     -moz-transition: all .5s ease-out;
@@ -187,10 +272,10 @@ body{
 
 }
 #home .row:nth-child(2) {
-    background-color: #7f8c8d;
+    background-color: #000000;
     min-height: 28%;
     color: #ecf0f1;
-    opacity: 1;
+    opacity: .85 ;
 }
 #home .row:nth-child(2):hover{
     /*-webkit-transform: rotate(10deg);*/
@@ -204,9 +289,10 @@ body{
     -o-transition: opacity .5s ease-out;
 }
 #home .row:nth-child(3) {
-    background-color: #2980b9;
+    background-color: transparent;
     min-height: 36%;
     color: #16a085;
+    font-size: 42px;
     opacity: 1;
     transition: opacity .5s ease-out;
     -moz-transition: all .5s ease-out;
@@ -300,6 +386,32 @@ body{
     padding-top: 5%;
 }
 
+.description{
+    position:absolute;
+    left:0px;
+    width:100%;
+    /*background-color:black;*/
+    font-family: 'helveticaneue';
+    font-size: 30px;
+    color:white;
+    
+    margin-top: 45%;
+    z-index: 1000;
+    position: absolute;
+}
+.tahoma{
+    font-family: "tahoma";
+    color:white;
+}
+
+.blurr img {
+    filter: blur(5px);
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+
 #grayscale img {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
@@ -326,4 +438,12 @@ body{
 
 .showOnUpload {
     visibility: hidden;
+}
+
+.page-header {
+    border-bottom: none;
+}
+
+.form-group {
+    margin-top: 30px;
 }
