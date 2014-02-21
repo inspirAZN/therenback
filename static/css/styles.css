@@ -13,7 +13,7 @@ body{
 }
 
 label {
-    color: #7f8c8d;
+    color: #e74c3c;
 }
 
 /* fonts */
@@ -77,8 +77,8 @@ label {
     background-color: transparent !important;
 }
 
-.green_sea_back {
-    background-color: #16a085 !important;
+.champagne_back {
+    background-color: #F7E7CE !important;
 }
 
 /* Font colors*/
@@ -91,7 +91,7 @@ label {
 }
 
 .alizarin {
-    color: #ecf0f1;
+    color: #e74c3c !important;
 }
 
 .green_sea {
@@ -100,6 +100,10 @@ label {
 
 .champagne {
     color: #F7E7CE;  
+}
+
+.pomegranate {
+    color: #c0392b;
 }
 
 /* Landing page styles */
@@ -116,13 +120,12 @@ label {
 
 .no_back {
     background-image: none !important;
-    background-color: #f7e7ce;
 }
 
 .moments .row{
 /*    border-bottom: #95a5a6 1px solid;*/
     font-family: corbert;
-    color: green_sea;
+    color: #16a085;
     margin-left: -22px;
 }
 
@@ -142,14 +145,12 @@ label {
     /*transition-timing-function: ease-in;*/
     transition-duration: 200ms;
 }
-
 .moments h1 {
-    /*color: #7f8c8d;*/
     margin-top: 30px;
-    margin-bottom: -5px;
+    margin-bottom: 7px;
 }
 .moments h3 {
-    color: #ecf0f1;
+    color: #e74c3c;
     font-size: 22px;
 }
 .moments span {
@@ -163,12 +164,10 @@ label {
 .more_moments {
     margin-bottom: 5%;
     margin-top: 3%;
-    color: #bdc3c7;
+    color: #2c3e50;
 }
 
-.bank h2 {
-    font-size: 20px;
-}
+j
 
 .bankform {
     margin-bottom: 5%;
@@ -179,9 +178,11 @@ label {
     height: 100%
     float: left;
     position: absolute;
+    /*-webkit-filter: grayscale(100%);*/
     margin: 0 0 0 0;
     background:url(http://i1372.photobucket.com/albums/ag338/joannkimmm/butcher_paper_zps1d539391.png);
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .foo {
@@ -213,15 +214,19 @@ label {
     font-size: 50px;
 }
 
+.center {
+    text-align: center;
+}
+
 .center-text {
     text-align: center;
-    font-size: 57px;
+    font-size: 57px !important;
     margin-top: 80px;
     margin-bottom: -10px;
 }
 
 .decrease-top-margin h2 {
-    margin-top: -3px;
+    margin-top: -10px;
 }
 
 .index-background {
@@ -328,14 +333,14 @@ label {
 .sortable li {
     width: 100%;
     list-style: none;
-    background-color: #16a085;
+    background-color: #e74c3c;
     text-align: center;
     padding: 1.5%;
     font-weight: bold;
 }
 
 .sortable li:nth-child(even) {
-    background-color: #1abc9c;
+    background-color: #c0392b;
 }
 
 .sortable li:first-child {
@@ -447,8 +452,9 @@ label {
 
 .page-header {
     border-bottom: none;
+    font-size: 42px;
 }
 
 .form-group {
-    margin-top: 30px;
+    margin-top: 10px;
 }
