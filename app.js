@@ -12,8 +12,6 @@ var mongoose = require('mongoose');
 
 var login = require('./routes/login');
 var moments = require('./routes/moments');
-//var project = require('./routes/project');
-//var palette = require('./routes/palette');
 // Example route
 // var user = require('./routes/user');
 
@@ -61,9 +59,16 @@ if ('development' == app.get('env')) {
 app.get('/', function(req, res) {
 	res.sendfile('index.html');
 });
+app.get('/login', function(req, res) {
+	res.sendfile('login.html');
+});
+app.get('/signup', function(req, res) {
+	res.sendfile('signup.html');
+});
 
 // dynamic routes
-app.get('/login', login.view);
+
+
 
 
 
