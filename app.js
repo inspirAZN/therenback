@@ -17,11 +17,15 @@ var moments = require('./routes/moments');
 // Example route
 // var user = require('./routes/user');
 
-var local_database_name = 'therenback';
-var local_database_uri  = 'mongodb://localhost/' + local_database_name
-var uristring = process.env.MONGOLAB_URI ||
-		process.env.MONGOLAB_URL ||
-		'mongodb://localhost/HelloMongoose';
+// var local_database_name = 'therenbackUsers';
+// var local_database_uri  = 'mongodb://localhost/' + local_database_name
+// var uristring = process.env.MONGOLAB_URI ||
+// 		process.env.MONGOLAB_URL ||
+// 		'mongodb://localhost/HelloMongoose';
+
+// connect to the database
+mongoose.connect("mongodb://heroku_app22799284:7jdr872c4cfck3289233bfb1o7@ds033449.mongolab.com:33449/heroku_app22799284")
+
 
 var app = express();
 
@@ -45,18 +49,19 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-mongoose.connect(uristring, function(err, res){
-  if (err) {
-    console.log('ERROR connect to: ' + uristring + '. ' + err  );
-  } else {
-    console.log('Succeeded connected to: ' + uristring);
-  }
-});
+// mongoose.connect(uristring, function(err, res){
+//   if (err) {
+//     console.log('ERROR connect to: ' + uristring + '. ' + err  );
+//   } else {
+//     console.log('Succeeded connected to: ' + uristring);
+//   }
+// });
 
 // Add routes here
-// app.get('/', index.view);
-app.get('/', moments.view);
-// app.get('/palette', palette.randomPalette);
+app.get('/', function(req, res) {
+	res.sendfile('index.html');
+});
+
 
 // Example route
 // app.get('/users', user.list);
