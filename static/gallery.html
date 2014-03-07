@@ -72,7 +72,7 @@
                         <div class="tab-content">
                           <div class="tab-pane fade in active" id="gallery">
                               <div id="content">
-                                <div class="thumb"> <a href="#imagepop" data-toggle="modal"><img src="http://i1372.photobucket.com/albums/ag338/joannkimmm/Shinjuku1_zps699b06c3.png" alt="" /></a> </div>
+                                <div class="thumb"> <a href="#imagepop" data-toggle="modal"><img src="http://i1372.photobucket.com/albums/ag338/joannkimmm/Shinjuku1_zps699b06c3.png" alt=""/></a> </div>
                                   <div class="thumb"> <a href="#imagepop" data-toggle="modal"><img src="http://i1372.photobucket.com/albums/ag338/joannkimmm/Shinjuku3_zps98c0c75c.png" alt="" /></a> </div>
                                   <div class="thumb"> <a href="#imagepop" data-toggle="modal"><img src="http://i1372.photobucket.com/albums/ag338/joannkimmm/Shinjuku2_zpse5339d08.png" alt="" /></a> </div>
                                   <div class="thumb"> <a href="#imagepop" data-toggle="modal"><img src="http://i1372.photobucket.com/albums/ag338/joannkimmm/Shinjuku4_zps9919cefd.png" alt="" /></a> </div>
@@ -130,16 +130,11 @@
 <div class="modal fade" id="imagepop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
+      <div id="insert" class="modal-body here">
+        <!-- populate with javascript -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
@@ -152,13 +147,37 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery-2.0.3.js"></script>
 <script src="js/jquery.tinycarousel.js"></script>
-<script src="js/tab1.js"></script>
+<!-- <script src="js/tab1.js"></script> -->
 <script src="js/jquery.tinycarousel.min.js"></script>
 <script type="text/javascript">
 $(function()
 {
     $('#slider1').tinycarousel();
 });
+</script>
+<script>
+$( document ).ready(function(){
+    $('.thumb').click(function(){
+        // remove previously inserted pictures
+        $('.displayed').remove();
+
+
+        // get the image url of the clicked element
+        var imgsrc = $(this).find('a').find('img').attr('src');
+        console.log(imgsrc);
+
+        // find the modal body
+        var html = "<img class='img-responsive displayed' src='";
+            html += imgsrc;
+            html += "'/>";
+
+        // insert the image to the modal
+        $('#insert').append(html);
+
+
+    });
+});
+
 </script>
 
 </body>
