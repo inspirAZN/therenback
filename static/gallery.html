@@ -4,7 +4,7 @@
 
     <!-- Google Analytics Content Experiment code -->
     <script>function utmx_section(){}function utmx(){}(function(){var
-    k='83075331-3',d=document,l=d.location,c=d.cookie;
+    k='83075331-4',d=document,l=d.location,c=d.cookie;
     if(l.search.indexOf('utm_expid='+k)>0)return;
     function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
     indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
@@ -81,8 +81,8 @@
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs">
-                          <li class="active"><a href="#gallery" data-toggle="tab" onclick="_gaq.push(['_trackEvent', 'gallery', 'clicked'])"><img src="http://i1372.photobucket.com/albums/ag338/joannkimmm/rsz_1rsz_1photo_2_1_zps2e020b80.png"></a></li>
-                          <li><a href="#slider" data-toggle="tab" onclick="_gaq.push(['_trackEvent', 'slider', 'clicked'])"><img src="http://i1372.photobucket.com/albums/ag338/joannkimmm/rsz_1rsz_photo_1_zpsbf4a5f44.png"></a></li>
+                          <li class="active"><a href="#gallery" data-toggle="tab"><img src="http://i1372.photobucket.com/albums/ag338/joannkimmm/rsz_1rsz_1photo_2_1_zps2e020b80.png"></a></li>
+                          <li><a href="#slider" data-toggle="tab"><img src="http://i1372.photobucket.com/albums/ag338/joannkimmm/rsz_1rsz_photo_1_zpsbf4a5f44.png"></a></li>
                         </ul>
 
                         <!-- Tab panes -->
@@ -129,8 +129,8 @@
                                   <li><img src="http://i1372.photobucket.com/albums/ag338/joannkimmm/S13_zps739617bc.png" /></li>
                                 </ul>
                               </div>
-                              <a class="buttons prev" href="#"><</a>
-                              <a class="buttons next" href="#">></a>
+                              <a class="buttons prev" href="#" onclick="_gaq.push(['_trackEvent', 'slider', 'clicked'])"><</a>
+                              <a class="buttons next" href="#" onclick="_gaq.push(['_trackEvent', 'slider', 'clicked'])">></a>
                             </div>
                           </div>
                         </div>
@@ -190,6 +190,8 @@ $( document ).ready(function(){
 
         // insert the image to the modal
         $('#insert').append(html);
+
+         _gaq.push(['_trackEvent', 'Interactions', 'Click', tab]);
 
 
     });

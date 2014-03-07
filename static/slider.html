@@ -94,8 +94,8 @@
                                   <li><img src="http://i1372.photobucket.com/albums/ag338/joannkimmm/S13_zps739617bc.png" /></li>
                                 </ul>
                               </div>
-                              <a class="buttons prev" href="#"><</a>
-                              <a class="buttons next" href="#">></a>
+                               <a class="buttons prev" href="#" onclick="_gaq.push(['_trackEvent', 'slider', 'clicked'])"><</a>
+                              <a class="buttons next" href="#" onclick="_gaq.push(['_trackEvent', 'slider', 'clicked'])">></a>
                             </div>
                           </div>
 
@@ -165,7 +165,7 @@ $( document ).ready(function(){
         // insert the image to the modal
         $('#insert').append(html);
 
-
+        _gaq.push(['_trackEvent', 'Interactions', 'Click', tab]);
     });
 });
 
