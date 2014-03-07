@@ -146,8 +146,39 @@ $(function()
 });
 </script>
 
+<script>
+$( document ).ready(function(){
+    $('.thumb').click(function(){
+        // remove previously inserted pictures
+        $('.displayed').remove();
 
 
+        // get the image url of the clicked element
+        var imgsrc = $(this).find('a').find('img').attr('src');
+        console.log(imgsrc);
+
+        // find the modal body
+        var html = "<img class='img-responsive displayed' src='";
+            html += imgsrc;
+            html += "'/>";
+
+        // insert the image to the modal
+        $('#insert').append(html);
+
+
+    });
+});
+
+</script>
+
+<script>
+    $('.nav-tabs li').click(function() {
+      var tab = $(this).find('a').attr('href');
+      
+      _gaq.push(['_trackEvent', 'Interactions', 'Click', tab]);
+
+    })
+</script>
 </body>
 </html>
 
