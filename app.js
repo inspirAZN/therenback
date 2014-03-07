@@ -10,7 +10,7 @@ var handlebars = require('express3-handlebars');
 var mongoose = require('mongoose');
 
 
-var index = require('./routes/index');
+var login = require('./routes/login');
 var moments = require('./routes/moments');
 //var project = require('./routes/project');
 //var palette = require('./routes/palette');
@@ -57,15 +57,16 @@ if ('development' == app.get('env')) {
 //   }
 // });
 
-// Add routes here
+// Static Routes
 app.get('/', function(req, res) {
 	res.sendfile('index.html');
 });
-    
+
+// dynamic routes
+app.get('/login', login.view);
 
 
-// Example route
-// app.get('/users', user.list);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
