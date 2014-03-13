@@ -164,6 +164,7 @@ $(function()
 <script>
 $( document ).ready(function(){
     $('.thumb').click(function(){
+        ga('send', 'event', 'gallery', 'Click');
         // remove previously inserted pictures
         $('.displayed').remove();
 
@@ -180,7 +181,7 @@ $( document ).ready(function(){
         // insert the image to the modal
         $('#insert').append(html);
 
-         ga('send', 'event', 'gallery', 'Click');
+         
 
 
     });
