@@ -17,6 +17,10 @@ img {
 	border: 0;
 }
 
+.font-size20 {
+	font-size: 20px !important;
+}
+
 .break {
 	font-size: 0;
 	width: 0; height: 0;
