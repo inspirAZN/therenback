@@ -132,9 +132,24 @@
 
 <!--  background-->
 
+
 <meta name="viewport" 
    content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <script src="https://code.jquery.com/jquery.js"></script>
+
+<script>
+$( document ).ready(function() {
+    $('div.heartoverlay').click(function (e){
+      // var className = $(this).find('span').attr('class');
+
+      if($(this).find('span').hasClass('glyphicon-heart')) {
+        $(this).find('span').removeClass('glyphicon-heart').addClass('glyphicon-heart-empty');
+      } else {
+        $(this).find('span').removeClass('glyphicon-heart-empty').addClass('glyphicon-heart');
+      }
+    });
+});
+</script>
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery-2.0.3.js"></script>
 </body>
